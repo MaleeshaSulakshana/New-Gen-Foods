@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".Admin.AdminDashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=" New Gen Foods "
+            android:textSize="45dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/caveat"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/todayDateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btnPending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_red_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Pending"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnProcessing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_white_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:text="Processing"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnCompleted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_red_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Completed"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnDelivered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_white_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:text="Delivered"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnFoodItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_red_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Food Items"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnCategories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_white_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:text="Categories"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnAddons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_red_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Addons"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnAdmins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_white_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:text="Admins"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_red_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Profile"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnSignOut"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_white_background_rounded"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:text="Sign Out"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    app:backgroundTint="@null"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="@drawable/card_background2">
+
+
+        <LinearLayout
+            android:id="@+id/ordersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtOrderType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Pending Orders"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/caveat"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"/>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/orderItemsListPullToRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ListView
+                        android:id="@+id/orderItemsList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"/>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewOrdersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Order Details"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/caveat"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/orderDetailsGoBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Go Back"
+                            android:textSize="18dp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/gray1"
+                            android:textAllCaps="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/orderStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text=""
+                            android:textSize="18dp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/gray1"
+                            android:textAllCaps="true"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/orderId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="18dp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/gray1"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:id="@+id/requesterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="18dp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/gray1"
+                    android:textAllCaps="true"/>
+
+                <ListView
+                    android:id="@+id/orderDetailsList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/foodItemsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnAddNewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_red_background_rounded"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text="Add New Item"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                app:backgroundTint="@null"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:scrollbars="none">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/categoryChipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    app:singleSelection="true">
+
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/categoryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text=""
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/caveat"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"/>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/menuItemListPullToRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ListView
+                        android:id="@+id/menuItemList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"/>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/categoriesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnAddNewCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_red_background_rounded"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text="Add New Category"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                app:backgroundTint="@null"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Categories"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/caveat"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"/>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/categoriesItemListPullToRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ListView
+                        android:id="@+id/categoriesItemList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"/>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnAddNewAddon"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_red_background_rounded"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text="Add New Addon"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                app:backgroundTint="@null"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Addons"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/caveat"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"/>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/addonItemListPullToRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ListView
+                        android:id="@+id/addonItemList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"/>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adminsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnAddNewAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_red_background_rounded"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text="Add New Admin"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                app:backgroundTint="@null"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Admin "
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/caveat"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"/>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/adminsItemListPullToRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ListView
+                        android:id="@+id/adminsItemList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"/>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

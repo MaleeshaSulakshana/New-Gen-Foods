@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:gravity="right">
+
+            <ImageButton
+                android:id="@+id/btnCloseForm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_white_background_rounded"
+                android:src="@drawable/ic_close"
+                app:tint="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Addon"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/caveat"
+            android:textColor="@color/black1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Addon Name"
+                android:textColor="@color/black1"
+                android:inputType="textPersonName"
+                android:drawableTint="@color/gray1"
+                android:textColorHint="@color/gray1"/>
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Price"
+                android:textColor="@color/black1"
+                android:inputType="number"
+                android:drawableTint="@color/gray1"
+                android:textColorHint="@color/gray1"/>
+
+            <Button
+                android:id="@+id/btnAddAddon"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_red_background"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text="Add Addon"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                app:backgroundTint="@null"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

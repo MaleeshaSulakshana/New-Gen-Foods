@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".Admin.AdminViewFoodItemDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_weight="6">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/itemImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/bg1"
+            app:civ_border_width="0dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:scrollbars="none"
+        android:gravity="center_vertical"
+        android:background="@drawable/card_background2"
+        android:layout_weight="4">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Title"
+                    android:textSize="18dp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/gray1"
+                    android:textAllCaps="true"/>
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Enter Title"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:drawableTint="@color/gray1"
+                    android:textColorHint="@color/gray1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Category"
+                    android:textSize="18dp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/gray1"
+                    android:textAllCaps="true"/>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scrollbars="none">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/categoryChipGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:singleSelection="true">
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Ingredients"
+                    android:textSize="18dp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/gray1"
+                    android:textAllCaps="true"/>
+
+                <EditText
+                    android:id="@+id/ingredients"
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Ingredients"
+                    android:textColor="@color/white"
+                    android:inputType="text|textMultiLine"
+                    android:drawableTint="@color/gray1"
+                    android:textColorHint="@color/gray1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Price (Rs)"
+                    android:textSize="18dp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/gray1"
+                    android:textAllCaps="true"/>
+
+                <EditText
+                    android:id="@+id/price"
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Enter Price (Rs)"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:drawableTint="@color/gray1"
+                    android:textColorHint="@color/gray1"/>
+
+                <Button
+                    android:id="@+id/btnAddItem"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_red_background"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Add Item"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    app:backgroundTint="@null"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/btnUpdateItem"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_red_background"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Update Item"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/btnRemoveItem"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_red_background"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Remove Item"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    app:backgroundTint="@null"/>
+
+
+                <LinearLayout
+                    android:id="@+id/commentSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Comments"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/caveat"
+                        android:textColor="@color/white"
+                        android:textAllCaps="true"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ListView
+                            android:id="@+id/commentsList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none"
+                            android:overScrollMode="never"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

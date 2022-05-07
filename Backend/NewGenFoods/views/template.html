@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Gen Foods Restaurant Bill</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+    <p style="color: black;">Receipt No - {{ bill_data.id }}</p>
+    <p style="color: black;">Receipt Date - {{ bill_data.date }}</p>
+    <p style="color: black;">Customer Name - {{ bill_data.name }}</p>
+    <p style="color: black;">Customer Email - {{ bill_data.email }}</p>
+
+    <br />
+
+    <table class="table" width="95%">
+        <thead>
+            <tr>
+                <th scope="col">Item Name</th>
+                <th scope="col">Addon</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Per Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each details}}
+            <tr>
+                <td>
+                    {{this.title}}
+                </td>
+                <td>
+                    {{this.addon}}
+                </td>
+                <td>{{this.qty}}</td>
+                <td>Rs. {{this.price}}</td>
+                <td>Rs. {{this.tprice}}</td>
+            </tr>
+            {{/each}}
+            <tr>
+                <td colspan="5" style="text-align: right; padding-right: 70px;">
+                    Total : Rs.{{ bill_data.total_amount }}
+                </td>
+            </tr>
+            {{#ifCond bill_data.discount '===' 'yes'}}
+            <tr>
+                <td colspan="5" style="text-align: right; padding-right: 70px;">
+                    Discount : 5%
+                </td>
+            </tr>
+            {{/ifCond}}
+            <tr>
+                <td colspan="5" style="text-align: right; padding-right: 70px;">
+                    Total Amount : Rs. {{ bill_data.total }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 style=" color: black;font-size:18;font-weight:800;text-align:center;">Thank You. Come again!</h3>
+
+</body>
+
+</html>

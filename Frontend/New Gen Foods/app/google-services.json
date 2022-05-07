@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "233830269450",
+    "project_id": "new-gen-foods",
+    "storage_bucket": "new-gen-foods.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233830269450:android:7c07e0ce3a6dc11dce55f3",
+        "android_client_info": {
+          "package_name": "com.example.newgenfoods"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233830269450-g94euedlikv6e7klthivafa9ckbu3dse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBELjS6mbn6bLRuuX1tCE8OocSyQuWZc4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233830269450-g94euedlikv6e7klthivafa9ckbu3dse.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
