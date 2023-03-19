@@ -58,7 +58,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`name`, `email`, `psw`) VALUES
-('Tamara', 'tamara@gmail.com', '12345678');
+('Maleesha', 'maleesha@gmail.com', '12345678');
 
 -- --------------------------------------------------------
 
@@ -98,8 +98,7 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `email`, `food_id`, `comment`) VALUES
-(6, 'tma200107@gmail.com', '2', 'no beef'),
-(7, 'tma200107@gmail.com', '3', 'no egg');
+(6, 'mpmsulakshana@gmail.com', '2', 'no beef'),
 
 -- --------------------------------------------------------
 
@@ -160,14 +159,9 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `id`, `email`, `date`, `total`, `status`, `discount`) VALUES
-(29, 0, 'tma200107@gmail.com', '2022-05-03', '900.0', 'Pending', 'no'),
-(30, 1, 'tma200107@gmail.com', '2022-05-03', '1000.0', 'Pending', 'no'),
 (31, 2, 'mpmsulakshana@gmail.com', '2022-05-03', '1350.0', 'Pending', 'no'),
 (32, 3, 'mpmsulakshana@gmail.com', '2022-05-03', '350.0', 'Pending', 'no'),
 (33, 4, 'mpmsulakshana@gmail.com', '2022-05-03', '350.0', 'Pending', 'no'),
-(34, 5, 'tma200107@gmail.com', '2022-05-03', '800.0', 'Pending', 'no'),
-(35, 6, 'tma200107@gmail.com', '2022-05-03', '1700.0', 'Pending', 'no'),
-(36, 7, 'tma200107@gmail.com', '2022-05-03', '1567.5', 'Delivered', 'yes');
 
 -- --------------------------------------------------------
 
@@ -189,15 +183,9 @@ CREATE TABLE `order_details` (
 --
 
 INSERT INTO `order_details` (`details_id`, `id`, `food_id`, `qty`, `addon`, `notice`) VALUES
-(43, '0', '2', '2', 'Cheese', 'no garlic'),
-(44, '1', '3', '2', 'Galic', ''),
 (45, '2', '2', '3', 'Cheese', ''),
 (46, '3', '2', '1', '', ''),
 (47, '4', '2', '1', '', ''),
-(48, '5', '4', '2', '', ''),
-(49, '6', '2', '2', '', ''),
-(50, '6', '4', '2', 'Cheese', ''),
-(51, '7', '3', '3', 'Cheese', 'Add garlic');
 
 -- --------------------------------------------------------
 
@@ -218,8 +206,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`name`, `email`, `dob`, `psw`) VALUES
 ('Maleeesha', 'mpmsulakshana@gmail.com', '1998/10/02', '12345678'),
-('Tharushi', 'tashia901@gmail.com', '1997/06/25', 'xzcf9l4k'),
-('Tamara D', 'tma200107@gmail.com', '2001/02/07', '12345678');
 
 --
 -- Indexes for dumped tables
